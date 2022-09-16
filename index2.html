@@ -8,13 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Descubre de que generacion eres:</h1>
-    <form action="">
-        <div>
+    <h1 class="text-center">Descubre de que generacion eres:</h1>
+    <form action="" class="text-center" id="form">
+        <div class=" mt-5">
             <label for="Nombre" >Ingrese su Nombre: </label>
             <input id="Nombre" type="text" maxlength="100" placeholder="Ingrese su nombre">
         </div>
-        <div>
+        <div class=" mt-5">
             <label for="Sexo" >Ingrese su sexo: </label>
             <select id ="Sexo">
                 <option value="Hombre">Hombre</option>
@@ -22,29 +22,54 @@
             </select>
             <!-- <input  type="text"  class="mt-3"placeholder="M-Mujer / H-Hombre" maxlength="1" class="text-uppercase"> -->
         </div>
-        <div>
+        <div class=" mt-5">
             <label for="edad" class=" mt-3">Ingrese su edad:  </label>
             <input  id= "edad" type="number" placeholder="ingrese su edad" maxlength="100">
         </div>
-        <div>
+        <div class=" mt-5">
             <label for="DNI" class=" mt-3">Ingrese su DNI:  </label>
             <input id="DNI"type="number" placeholder="DNI sin puntos" maxlength="8">
         </div>
-        <div>
+        <div class=" mt-5">
             <label for="altura" class=" mt-3">Ingrese su altura : </label>
             <input  id="altura"type="number" placeholder="En centimetros" maxlength="4">
         </div>
-        <div>
+        <div class=" mt-5">
             <label for="peso" class=" mt-3">Ingrese su peso:  </label>
             <input id="peso"type="number" placeholder="En Kilogramos" maxlength="4">
         </div>
-        <div>
+        <div class=" mt-5">
             <label for="anioNacimiento" class=" mt-3">Ingrese su año de nacimiento:  </label>
             <input id="anioNacimiento"type="number" placeholder="AAAA" maxlength="4">
         </div>
+        <button class=" mt-5" onclick="handleSubmit()">Enviar</button>
     </form>
 <div class="mt-5">
-    <button onclick="optenerValores()" type="submit">Clickea para descubrir tu generacion</button>
+    
+    <section class=" my-5">
+        <h2 class=" text-center">Listado</h2>
+        <table class=" table table-responsive">
+            <thead class=" text-center">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Altura</th>
+                    <th scope="col">Nacimiento</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+                <tbody id="ListaPersonas">
+                    <tr>
+                    
+                    </th>
+                </tr>
+                </tbody>
+            </thead>
+        </table>
+    </section>
+    <!-- <button onclick="optenerValores()" type="submit">Clickea para descubrir tu generacion</button> -->
     <button onclick="mayoriaEdad() "type="submit">Clickea para descubrir si eres mayor de edad</button>
     <button  onclick="mostrarDatosUsuario()" type="submit">Clickea para ver todos tus datos</button>
 </div>
